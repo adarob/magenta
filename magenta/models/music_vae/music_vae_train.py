@@ -66,7 +66,7 @@ flags.DEFINE_integer(
     'task', 0,
     'The task number for this worker.')
 flags.DEFINE_integer(
-    'num_ps_tasks', 0,
+    'ps_tasks', 0,
     'The number of parameter server tasks.')
 flags.DEFINE_integer(
     'num_sync_workers', 0,
@@ -299,7 +299,7 @@ def run(config_map,
         num_steps=FLAGS.num_steps,
         master=FLAGS.master,
         num_sync_workers=FLAGS.num_sync_workers,
-        num_ps_tasks=FLAGS.num_ps_tasks,
+        num_ps_tasks=FLAGS.ps_tasks,
         task=FLAGS.task)
   else:
     num_batches = FLAGS.eval_num_batches or data.count_examples(
