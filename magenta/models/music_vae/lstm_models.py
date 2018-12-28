@@ -34,7 +34,6 @@ from tensorflow.python.layers import core as layers_core
 from tensorflow.python.util import nest
 
 
-
 # ENCODERS
 
 
